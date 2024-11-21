@@ -11,7 +11,10 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
 
     <title>Pagamento</title>
   </head>
@@ -19,26 +22,24 @@
     <main>
       <header>
         <div id="qr-code">
-          <img src="./img/404.png" alt="QR Code" />
-
+          <img
+            src="{{ url_for('static', filename='template_img/404.png') }}"
+            alt="QR Code"
+          />
         </div>
 
         <aside>
           <h1>Ops, não encontramos seu pedido</h1>
           <p>
-            Verifique se a URL está correta. Em caso de dúvidas, entre em contato com o nosso time de suporte.
+            Verifique se a URL está correta. Em caso de dúvidas, entre em
+            contato com o nosso time de suporte.
           </p>
           <div id="div-buttons">
-            <button id="my-orders-button">
-              VER MEUS PEDIDOS
-            </button>
-            <button id="support-button">
-              FALAR COM O SUPORTE
-            </button>
+            <button id="my-orders-button">VER MEUS PEDIDOS</button>
+            <button id="support-button">FALAR COM O SUPORTE</button>
           </div>
         </aside>
       </header>
-
     </main>
   </body>
 </html>
